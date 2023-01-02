@@ -1,0 +1,13 @@
+<h1>Create a new game</h1>
+
+<form [formGroup]="gameForm" (ngSubmit)="onSubmit()">
+  <label for="name">Name:</label><br />
+  <input type="text" id="name" formControlName="name" /><br />
+  <label for="bundle">Bundle:</label><br />
+  <input type="text" id="bundle" formControlName="bundle" /><br />
+  <label for="owner">Owner:</label><br />
+  <input type="email" id="owner" formControlName="owner" /><br />
+  <label for="icon">Icon:</label><br />
+  <input type="file" id="icon" formControlName="icon" /><br /><br />
+  <button type="submit">Submit</button>
+</form>

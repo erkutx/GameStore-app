@@ -1,0 +1,18 @@
+<h1>Game List</h1>
+
+<p *ngIf="games.length === 0">No games found</p>
+
+<ul>
+  <li *ngFor="let game of games">
+    <h2>{{ game.name }}</h2>
+    <img
+      [src]="game.icon"
+      alt="{{ game.name }} icon"
+      (error)="game.icon = 'assets/default-image.png'"
+      width="80"
+      height="80"
+    />
+    <p>Owner: {{ game.owner }}</p>
+    <button (click)="deleteGame(game)">Delete</button>
+  </li>
+</ul>
